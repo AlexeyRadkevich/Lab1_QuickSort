@@ -9,6 +9,15 @@ namespace Lab1_QuickSort
     class Program
     {
 
+        static int[] createRandIntArr()
+        {
+            Random rand = new Random();
+            int[] arr = new int[10];
+            for (int i = 0; i < arr.Length; i++)
+                arr[i] = rand.Next(0, 100);
+            return arr;
+        }
+
         static void printIntArr(int[] arr)
         {
             Console.WriteLine("\n");
@@ -20,10 +29,7 @@ namespace Lab1_QuickSort
 
         static void Main(string[] args)
         {
-            Random rand = new Random();
-            int[] arr = new int[10];
-            for (int i = 0; i < arr.Length; i++)
-                arr[i] = rand.Next(0, 100);
+            int[] arr = createRandIntArr();
 
             printIntArr(arr);
 
