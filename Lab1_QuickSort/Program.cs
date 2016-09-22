@@ -9,12 +9,33 @@ namespace Lab1_QuickSort
     class Program
     {
 
+        static void printIntArr(int[] arr)
+        {
+            Console.WriteLine("\n");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+        }
+
         static void Main(string[] args)
         {
-            
+            Random rand = new Random();
+            int[] arr = new int[10];
+            for (int i = 0; i < arr.Length; i++)
+                arr[i] = rand.Next(0, 100);
+
+            printIntArr(arr);
+
+            QuickSort<int> qSort = new QuickSort<int>();
+            qSort.Sort(arr, 0, arr.Length - 1);
+
+            printIntArr(arr);
+
+            int x = Console.Read();
         }
     }
- 
+
     public class QuickSort<T> where T : IComparable<T>
     {
         public void Sort(T[] arr, int l, int r)
@@ -33,12 +54,12 @@ namespace Lab1_QuickSort
 
                 if (l < j)
                 {
-                    Sort(arr,i,r);
+                    Sort(arr, i, r);
                 }
 
                 if (r > i)
                 {
-                    Sort(arr,l,j);
+                    Sort(arr, l, j);
                 }
             }
         }
