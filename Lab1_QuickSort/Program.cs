@@ -14,7 +14,7 @@ namespace Lab1_QuickSort
         }
     }
 
-    class QuickSort<T> where T : IComparable<T>
+    public class QuickSort<T> where T : IComparable<T>
     {
         public void Sort(T[] arr, int l, int r)
         {
@@ -27,20 +27,17 @@ namespace Lab1_QuickSort
 
                 if (i <= j)
                 {
-                    // Swap(ref arr[i], ref arr[j]);
-                    i++;
-                    j++;
+                    Swap(ref arr[i++], ref arr[j--]);
                 }
 
                 if (l < j)
                 {
-                    //Sort(arr,l,r);
-
+                    Sort(arr,i,r);
                 }
 
                 if (r > i)
                 {
-                    //Sort(arr,l,r);
+                    Sort(arr,l,j);
                 }
             }
         }
