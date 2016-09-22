@@ -11,7 +11,7 @@ namespace Lab1_QuickSort
 
         static void Main(string[] args)
         {
-          
+            
         }
     }
  
@@ -21,7 +21,6 @@ namespace Lab1_QuickSort
         {
             int i = l, j = r;
             T x = arr[l + (r - l) / 2];
-            Console.WriteLine(x);
             while (i <= j)
             {
                 while (arr[i].CompareTo(x) < 0) i++;
