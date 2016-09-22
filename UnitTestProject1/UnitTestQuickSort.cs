@@ -5,7 +5,7 @@ using Lab1_QuickSort;
 namespace UnitTestQuickSort
 {
     [TestClass]
-    public class UnitTestQuickSort
+    public class UnitTestQuickSort 
     {
         [TestMethod]
         public void Test_Sort()

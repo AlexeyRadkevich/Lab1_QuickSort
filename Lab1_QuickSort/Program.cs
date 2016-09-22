@@ -8,18 +8,20 @@ namespace Lab1_QuickSort
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-
+          
         }
     }
-
+ 
     public class QuickSort<T> where T : IComparable<T>
     {
         public void Sort(T[] arr, int l, int r)
         {
             int i = l, j = r;
             T x = arr[l + (r - l) / 2];
+            Console.WriteLine(x);
             while (i <= j)
             {
                 while (arr[i].CompareTo(x) < 0) i++;
