@@ -44,5 +44,12 @@ namespace Lab1_QuickSort
                 }
             }
         }
+
+        public void Swap(ref T a, ref T b)
+        {
+            T temp = a;
+            a = b;
+            b = temp;
+        }
     }
 }
