@@ -31,14 +31,13 @@ namespace Lab1_QuickSort
         {
             int[] arr = createRandIntArr();
 
-            printIntArr(arr);
-
             QuickSort<int> qSort = new QuickSort<int>();
-            qSort.Sort(arr, 0, arr.Length - 1);
 
             printIntArr(arr);
+            qSort.Sort(arr, 0, arr.Length - 1);
+            printIntArr(arr);
 
-            int x = Console.Read();
+            Console.ReadKey();
         }
     }
 
@@ -60,12 +59,12 @@ namespace Lab1_QuickSort
 
                 if (l < j)
                 {
-                    Sort(arr, i, r);
+                    Sort(arr, l, j);
                 }
 
                 if (r > i)
                 {
-                    Sort(arr, l, j);
+                    Sort(arr, i, r);
                 }
             }
         }

@@ -26,5 +26,15 @@ namespace UnitTestQuickSort
             testSort.Sort(arr, 0, 8);
             CollectionAssert.AreEqual(arr, expArr);
         }
+
+        [TestMethod]
+        public void Test_SortStr()
+        {
+            QuickSort<string> testSort = new QuickSort<string>();
+            string[] arr = { "c", "a", "b", "f" };
+            string[] expArr = { "a", "b", "c", "f" };
+            testSort.Sort(arr, 0, 3);
+            CollectionAssert.AreEqual(arr, expArr);
+        }
     }
 }
